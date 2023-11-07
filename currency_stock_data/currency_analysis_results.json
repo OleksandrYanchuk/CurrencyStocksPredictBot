@@ -1,0 +1,234 @@
+{
+    "EUR/USD": {
+        "RMSE": 0.0034582102298736928,
+        "MAE": 0.0034582102298736928,
+        "actual_change": [
+            -0.21
+        ],
+        "predict_change": [
+            0.11
+        ]
+    },
+    "USD/JPY": {
+        "RMSE": 0.6021206665039074,
+        "MAE": 0.6021206665039074,
+        "actual_change": [
+            0.31
+        ],
+        "predict_change": [
+            -0.09
+        ]
+    },
+    "GBP/USD": {
+        "RMSE": 0.004852865934371842,
+        "MAE": 0.004852865934371842,
+        "actual_change": [
+            -0.23
+        ],
+        "predict_change": [
+            0.17
+        ]
+    },
+    "AUD/USD": {
+        "RMSE": 0.006574118733406076,
+        "MAE": 0.006574118733406076,
+        "actual_change": [
+            -0.9
+        ],
+        "predict_change": [
+            0.11
+        ]
+    },
+    "NZD/USD": {
+        "RMSE": 0.00562730610370632,
+        "MAE": 0.00562730610370632,
+        "actual_change": [
+            -0.66
+        ],
+        "predict_change": [
+            0.28
+        ]
+    },
+    "EUR/JPY": {
+        "RMSE": 0.2335883254848015,
+        "MAE": 0.2335877990722679,
+        "actual_change": [
+            0.1,
+            0.09
+        ],
+        "predict_change": [
+            -0.05,
+            -0.05
+        ]
+    },
+    "GBP/JPY": {
+        "RMSE": 0.1154751586913676,
+        "MAE": 0.1154751586913676,
+        "actual_change": [
+            0.1
+        ],
+        "predict_change": [
+            0.03
+        ]
+    },
+    "EUR/GBP": {
+        "RMSE": 0.0005869841575623092,
+        "MAE": 0.0005869841575623092,
+        "actual_change": [
+            0.05
+        ],
+        "predict_change": [
+            -0.02
+        ]
+    },
+    "EUR/CAD": {
+        "RMSE": 0.0021950805187225253,
+        "MAE": 0.0021950805187225253,
+        "actual_change": [
+            0.09
+        ],
+        "predict_change": [
+            -0.06
+        ]
+    },
+    "EUR/SEK": {
+        "RMSE": 0.005805683135983841,
+        "MAE": 0.005805683135983841,
+        "actual_change": [
+            0.11
+        ],
+        "predict_change": [
+            0.06
+        ]
+    },
+    "EUR/CHF": {
+        "RMSE": 0.00041895091533661333,
+        "MAE": 0.00041895091533661333,
+        "actual_change": [
+            -0.04
+        ],
+        "predict_change": [
+            0.0
+        ]
+    },
+    "EUR/HUF": {
+        "RMSE": 0.07820037841798921,
+        "MAE": 0.07820037841798921,
+        "actual_change": [
+            0.06
+        ],
+        "predict_change": [
+            0.04
+        ]
+    },
+    "USD/CNY": {
+        "RMSE": 0.011770057678222479,
+        "MAE": 0.011770057678222479,
+        "actual_change": [
+            0.1
+        ],
+        "predict_change": [
+            -0.06
+        ]
+    },
+    "USD/HKD": {
+        "RMSE": 0.0010384607315065963,
+        "MAE": 0.0010384607315065963,
+        "actual_change": [
+            -0.02
+        ],
+        "predict_change": [
+            -0.01
+        ]
+    },
+    "USD/SGD": {
+        "RMSE": 0.0031236374378205145,
+        "MAE": 0.0031236374378205145,
+        "actual_change": [
+            0.27
+        ],
+        "predict_change": [
+            0.03
+        ]
+    },
+    "USD/INR": {
+        "RMSE": 0.07770660400390739,
+        "MAE": 0.07770660400390739,
+        "actual_change": [
+            0.08
+        ],
+        "predict_change": [
+            -0.02
+        ]
+    },
+    "USD/MXN": {
+        "RMSE": 0.047224121093748295,
+        "MAE": 0.047224121093748295,
+        "actual_change": [
+            0.16
+        ],
+        "predict_change": [
+            -0.11
+        ]
+    },
+    "USD/PHP": {
+        "RMSE": 0.11075897216796449,
+        "MAE": 0.11075897216796449,
+        "actual_change": [
+            0.36
+        ],
+        "predict_change": [
+            0.16
+        ]
+    },
+    "USD/IDR": {
+        "RMSE": 40.29401367187529,
+        "MAE": 40.29401367187529,
+        "actual_change": [
+            0.46
+        ],
+        "predict_change": [
+            0.2
+        ]
+    },
+    "USD/THB": {
+        "RMSE": 0.11243015289306868,
+        "MAE": 0.11243015289306868,
+        "actual_change": [
+            0.21
+        ],
+        "predict_change": [
+            -0.1
+        ]
+    },
+    "USD/MYR": {
+        "RMSE": 0.010527210235595774,
+        "MAE": 0.010527210235595774,
+        "actual_change": [
+            0.63
+        ],
+        "predict_change": [
+            0.4
+        ]
+    },
+    "USD/ZAR": {
+        "RMSE": 0.07434667587279975,
+        "MAE": 0.07434667587279975,
+        "actual_change": [
+            0.48
+        ],
+        "predict_change": [
+            0.08
+        ]
+    },
+    "USD/RUB": {
+        "RMSE": 0.6386521911621088,
+        "MAE": 0.6386521911621088,
+        "actual_change": [
+            -0.16
+        ],
+        "predict_change": [
+            -0.85
+        ]
+    }
+}
