@@ -5,8 +5,6 @@ import schedule
 import time
 import subprocess
 
-os.environ['MAGICK_NO_X11'] = '1'
-
 
 def run_my_script():
     subprocess.run(["python", "currency_stock_data/currency_stock_data.py"])
@@ -19,7 +17,7 @@ def run_my_script():
     subprocess.run(["python", "predict_bot.py"])
 
 
-schedule.every().day.at("18:25").do(run_my_script)
+schedule.every().day.at("18:40").do(run_my_script)
 
 # Головний цикл для перевірки розкладу
 while True:
