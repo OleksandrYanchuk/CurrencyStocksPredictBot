@@ -17,7 +17,7 @@ def run_my_script():
     subprocess.run(["python", "predict_bot.py"])
 
 
-schedule.every().day.at("18:40").do(run_my_script)
+schedule.every().day.at("18:58").do(run_my_script)
 
 # Головний цикл для перевірки розкладу
 while True:
