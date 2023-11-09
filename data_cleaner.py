@@ -1,18 +1,13 @@
 import os
-import datetime
+from datetime import datetime, timedelta
 
-directory = "currency_stock_data"
-current_time = datetime.datetime.now()
+directory = "currency_stock_data/"
+file_to_delete = datetime.today().date() - timedelta(days=2)
 
 for filename in os.listdir(directory):
     file_path = os.path.join(directory, filename)
 
-    if filename.endswith(".csv") or filename.endswith(".json"):
-        file_creation_time = datetime.datetime.fromtimestamp(
-            os.path.getctime(file_path)
-        )
-        days_difference = (current_time - file_creation_time).days
-
-        if days_difference > 3:
-            os.remove(file_path)
-            print(f"Видалено файл: {filename}")
+    if filename.endswith(f"{file_to_delete}.csv") or filename.endswith(
+        f"{file_to_delete}.json"
+    ):
+        os.remove(file_path)
