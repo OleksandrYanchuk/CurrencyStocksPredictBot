@@ -15,7 +15,7 @@ def run_my_script():
 
 
 # Schedule the job
-schedule.every().day.at("21:32").do(run_my_script)
+schedule.every().day.at("21:40").do(run_my_script)
 
 # Main loop to check the schedule
 while True:
