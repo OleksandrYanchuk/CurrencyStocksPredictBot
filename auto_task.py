@@ -12,7 +12,7 @@ def run_my_script():
     subprocess.run(["python", "predict_bot.py"])
 
 # Schedule the job
-schedule.every().day.at("20:25").do(run_my_script)
+schedule.every().day.at("20:30").do(run_my_script)
 
 # Main loop to check the schedule
 def run_scheduled_job():
