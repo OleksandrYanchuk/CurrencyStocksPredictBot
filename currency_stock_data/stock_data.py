@@ -147,21 +147,6 @@ for stock in unique_stock_month:
     predictions = model.predict(X)
     predictions_by_stock_month[stock] = predictions
 
-# Результати передбачення збережені в словнику "predictions_by_currency_pair"
-for stock, predictions in predictions_by_stock.items():
-    print(f"Stock: {stock}")
-    print("Predictions:")
-    print(predictions)
-
-for stock, predictions in predictions_by_stock_week.items():
-    print(f"Stock: {stock}")
-    print("Predictions:")
-    print(predictions)
-
-for stock, predictions in predictions_by_stock_month.items():
-    print(f"Stock: {stock}")
-    print("Predictions:")
-    print(predictions)
 
 for stock, predictions in predictions_by_stock.items():
     predictions_by_stock[stock] = predictions.tolist()

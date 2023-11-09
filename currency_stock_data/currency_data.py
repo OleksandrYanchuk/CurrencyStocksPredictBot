@@ -68,10 +68,7 @@ for currency_pair in unique_currency_pairs:
 
 # Результати передбачення збережені в словнику "predictions_by_currency_pair"
 for currency_pair, predictions in predictions_by_currency_pair.items():
-    print(f"Currency Pair: {currency_pair}")
-    print("Predictions:")
-    print(predictions)
-
+    
 
 for currency_pair, predictions in predictions_by_currency_pair.items():
     predictions_by_currency_pair[currency_pair] = predictions.tolist()
