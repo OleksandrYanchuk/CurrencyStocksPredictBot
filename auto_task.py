@@ -9,17 +9,10 @@ from flask import Flask
 app = Flask(__name__)
 
 def run_my_script():
-    subprocess.run(["python", "currency_stock_data/currency_stock_data.py"])
-    subprocess.run(["python", "currency_stock_data/stock_data.py"])
-    subprocess.run(["python", "currency_stock_data/currency_data.py"])
-    subprocess.run(["python", "currency_stock_data/previous_day_data.py"])
-    subprocess.run(["python", "currency_stock_data/stock_predict_analys_rate.py"])
-    subprocess.run(["python", "currency_stock_data/currency_predict_analys_rate.py"])
-    subprocess.run(["python", "data_cleaner.py"])
     subprocess.run(["python", "predict_bot.py"])
 
 # Schedule the job
-schedule.every().day.at("20:00").do(run_my_script)
+schedule.every().day.at("20:25").do(run_my_script)
 
 # Main loop to check the schedule
 def run_scheduled_job():
