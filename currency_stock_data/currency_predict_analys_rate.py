@@ -36,8 +36,10 @@ def analysis_function(previous_day_data, predicted_prices):
 
 
 # Отримайте список файлів з фактичними цінами закриття та передбаченнями
-previous_day_data_files = glob.glob("previous_day_data_currency_*.csv")
-prediction_files = glob.glob("currency_predictions_*.json")
+previous_day_data_files = glob.glob(
+    "currency_stock_data/previous_day_data_currency_*.csv"
+)
+prediction_files = glob.glob("currency_stock_data/currency_predictions_*.json")
 
 # Отримайте список унікальних дат з назв файлів
 dates_previous_day_data = [
@@ -51,8 +53,10 @@ common_dates = set(dates_previous_day_data) & set(dates_predictions)
 results = {}
 for date in common_dates:
     # Отримайте файли з фактичними цінами закриття та передбаченнями для поточної дати
-    previous_day_data_file = f"previous_day_data_currency_{date}.csv"
-    prediction_file = f"currency_predictions_{date}.json"
+    previous_day_data_file = (
+        f"currency_stock_data/previous_day_data_currency_{date}.csv"
+    )
+    prediction_file = f"currency_stock_data/currency_predictions_{date}.json"
 
     # Завантажте фактичні ціни закриття
     previous_day_data = pd.read_csv(previous_day_data_file)
@@ -78,7 +82,7 @@ for date in common_dates:
         results[result_key] = analysis_result
 
 # Збережіть результати в JSON-файл
-with open("currency_analysis_results.json", "w") as json_file:
+with open("currency_stock_data/currency_analysis_results.json", "w") as json_file:
     json.dump(results, json_file, indent=4)
 
 print("Результати аналізу збережено у файлі 'currency_analysis_results.json'.")

@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 from sklearn.preprocessing import LabelEncoder
 
 stock_data = pd.read_csv(
-    f"combined_data_stock_{datetime.today().date()}.csv",
+    f"currency_stock_data/combined_data_stock_{datetime.today().date()}.csv",
     skiprows=[0],  # Пропустити перший рядок (назви стовпців)
     names=[
         "Data",
@@ -32,7 +32,7 @@ stock_data = pd.read_csv(
 )
 
 stock_data_week = pd.read_csv(
-    f"combined_data_stock_week_{datetime.today().date()}.csv",
+    f"currency_stock_data/combined_data_stock_week_{datetime.today().date()}.csv",
     skiprows=[0],  # Пропустити перший рядок (назви стовпців)
     names=[
         "Open",
@@ -54,7 +54,7 @@ stock_data_week = pd.read_csv(
 )
 
 stock_data_month = pd.read_csv(
-    f"combined_data_stock_month_{datetime.today().date()}.csv",
+    f"currency_stock_data/combined_data_stock_month_{datetime.today().date()}.csv",
     skiprows=[0],  # Пропустити перший рядок (назви стовпців)
     names=[
         "Open",
@@ -173,15 +173,17 @@ for stock, predictions in predictions_by_stock_month.items():
     predictions_by_stock_month[stock] = predictions.tolist()
 
 # Збережіть словник у JSON файл
-file_name = f"stock_predictions_{datetime.today().date()}.json"
+file_name = f"currency_stock_data/stock_predictions_{datetime.today().date()}.json"
 with open(file_name, "w") as json_file:
     json.dump(predictions_by_stock, json_file)
 
 
-file_name = f"stock_predictions_week_{datetime.today().date()}.json"
+file_name = f"currency_stock_data/stock_predictions_week_{datetime.today().date()}.json"
 with open(file_name, "w") as json_file:
     json.dump(predictions_by_stock_week, json_file)
 
-file_name = f"stock_predictions_month_{datetime.today().date()}.json"
+file_name = (
+    f"currency_stock_data/stock_predictions_month_{datetime.today().date()}.json"
+)
 with open(file_name, "w") as json_file:
     json.dump(predictions_by_stock_month, json_file)

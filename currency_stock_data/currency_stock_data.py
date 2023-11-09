@@ -44,14 +44,18 @@ combined_data_stock_month = pd.concat(stock_data_month)
 
 # Збережіть дані за акції та валютні пари за сьогодні
 combined_data_currency.to_csv(
-    f"combined_data_currency_{datetime.today().date()}.csv", index=False
+    f"currency_stock_data/combined_data_currency_{datetime.today().date()}.csv",
+    index=False,
 )
 combined_data_stock.to_csv(
-    f"combined_data_stock_{datetime.today().date()}.csv", index=False
+    f"currency_stock_data/combined_data_stock_{datetime.today().date()}.csv",
+    index=False,
 )
 combined_data_stock_week.to_csv(
-    f"combined_data_stock_week_{datetime.today().date()}.csv", index=False
+    f"currency_stock_data/combined_data_stock_week_{datetime.today().date()}.csv",
+    index=False,
 )
 combined_data_stock_month.to_csv(
-    f"combined_data_stock_month_{datetime.today().date()}.csv", index=False
+    f"currency_stock_data/combined_data_stock_month_{datetime.today().date()}.csv",
+    index=False,
 )

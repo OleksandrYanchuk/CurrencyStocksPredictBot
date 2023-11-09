@@ -1,8 +1,6 @@
 import logging
-import os
 from datetime import datetime, timedelta
 
-from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import (
     ReplyKeyboardMarkup,
@@ -13,13 +11,11 @@ from aiogram.types import (
 from currency_stock_data.labels import currency, stock_tickers
 import json
 
-load_dotenv()
-
 
 # Функція для завантаження даних з JSON-файлу
 def load_currency_data():
     file_name = (
-        f"currency_stock_data\currency_predictions_{datetime.today().date()}.json"
+        f"currency_stock_data/currency_predictions_{datetime.today().date()}.json"
     )
     with open(file_name, "r") as json_file:
         data = json.load(json_file)
@@ -27,7 +23,7 @@ def load_currency_data():
 
 
 def load_stock_data():
-    file_name = f"currency_stock_data\stock_predictions_{datetime.today().date()}.json"
+    file_name = f"currency_stock_data/stock_predictions_{datetime.today().date()}.json"
     with open(file_name, "r") as json_file:
         data = json.load(json_file)
     return data
@@ -35,7 +31,7 @@ def load_stock_data():
 
 def load_stock_data_week():
     file_name = (
-        f"currency_stock_data\stock_predictions_week_{datetime.today().date()}.json"
+        f"currency_stock_data/stock_predictions_week_{datetime.today().date()}.json"
     )
     with open(file_name, "r") as json_file:
         data = json.load(json_file)
@@ -44,7 +40,7 @@ def load_stock_data_week():
 
 def load_stock_data_month():
     file_name = (
-        f"currency_stock_data\stock_predictions_month_{datetime.today().date()}.json"
+        f"currency_stock_data/stock_predictions_month_{datetime.today().date()}.json"
     )
     with open(file_name, "r") as json_file:
         data = json.load(json_file)
@@ -52,20 +48,20 @@ def load_stock_data_month():
 
 
 def load_currency_data_analys():
-    file_name = f"currency_stock_data\currency_analysis_results.json"
+    file_name = f"currency_stock_data/currency_analysis_results.json"
     with open(file_name, "r") as json_file:
         data = json.load(json_file)
     return data
 
 
 def load_stock_data_analys():
-    file_name = f"currency_stock_data\stock_analysis_results.json"
+    file_name = f"currency_stock_data/stock_analysis_results.json"
     with open(file_name, "r") as json_file:
         data = json.load(json_file)
     return data
 
 
-API_TOKEN = os.getenv("API_TOKEN")
+API_TOKEN = "6769232966:AAHqN2ikRizwwOe9YjWeUfK5Oakd70rda_w"
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
@@ -348,4 +344,6 @@ async def process_next_page_analys_stocks(query: types.CallbackQuery):
 if __name__ == "__main__":
     from aiogram import executor
 
-    executor.start_polling(dp, skip_updates=True)
+    # Check if the script is being run directly
+    if __name__ == "__main__":
+        executor.start_polling(dp, skip_updates=True)

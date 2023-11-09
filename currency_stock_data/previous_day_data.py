@@ -30,8 +30,10 @@ combined_data_stock = pd.concat(stock_data)
 
 # Збережіть дані за акції та валютні пари за попередній день
 combined_data_currency.to_csv(
-    f"previous_day_data_currency_{previous_day.date()}.csv", index=False
+    f"currency_stock_data/previous_day_data_currency_{previous_day.date()}.csv",
+    index=False,
 )
 combined_data_stock.to_csv(
-    f"previous_day_data_stock_{previous_day.date()}.csv", index=False
+    f"currency_stock_data/previous_day_data_stock_{previous_day.date()}.csv",
+    index=False,
 )
