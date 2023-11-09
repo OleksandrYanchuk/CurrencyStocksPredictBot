@@ -8,7 +8,7 @@ import joblib
 print(os.getcwd())
 
 currency_data = pd.read_csv(
-    f"combined_data_currency_{datetime.today().date()}.csv",
+    f"currency_stock_data/combined_data_currency_{datetime.today().date()}.csv",
     skiprows=[0],  # Пропустити перший рядок (назви стовпців)
     names=[
         "Data",
@@ -77,6 +77,6 @@ for currency_pair, predictions in predictions_by_currency_pair.items():
     predictions_by_currency_pair[currency_pair] = predictions.tolist()
 
 # Збережіть словник у JSON файл
-file_name = f"currency_predictions_{datetime.today().date()}.json"
+file_name = f"currency_stock_data/currency_predictions_{datetime.today().date()}.json"
 with open(file_name, "w") as json_file:
     json.dump(predictions_by_currency_pair, json_file)
