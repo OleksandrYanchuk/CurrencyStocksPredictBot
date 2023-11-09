@@ -66,10 +66,6 @@ for currency_pair in unique_currency_pairs:
     predictions = model.predict(X)
     predictions_by_currency_pair[currency_pair] = predictions
 
-# Результати передбачення збережені в словнику "predictions_by_currency_pair"
-for currency_pair, predictions in predictions_by_currency_pair.items():
-    
-
 for currency_pair, predictions in predictions_by_currency_pair.items():
     predictions_by_currency_pair[currency_pair] = predictions.tolist()
 
