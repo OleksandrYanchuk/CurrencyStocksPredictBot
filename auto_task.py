@@ -1,7 +1,8 @@
+#!/usr/bin/env python
+
 import schedule
 import time
 import subprocess
-from predict_bot import *
 
 
 def run_my_script():
@@ -56,7 +57,7 @@ def run_my_script():
 
 
 # Розклад
-schedule.every().day.at("17:40").do(run_my_script)
+schedule.every().day.at("17:58").do(run_my_script)
 
 # Головний цикл для перевірки розкладу
 while True:
