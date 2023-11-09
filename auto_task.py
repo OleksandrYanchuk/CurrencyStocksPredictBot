@@ -56,7 +56,7 @@ def run_my_script():
 
 
 # Розклад
-schedule.every().day.at("15:21").do(run_my_script)
+schedule.every().day.at("17:40").do(run_my_script)
 
 # Головний цикл для перевірки розкладу
 while True:
