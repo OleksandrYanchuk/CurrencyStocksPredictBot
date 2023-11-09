@@ -1,1 +1,1 @@
-web: python auto_task.py
+worker: python auto_task.py
