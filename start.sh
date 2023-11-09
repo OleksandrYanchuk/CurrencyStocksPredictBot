@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python auto_task.py
+python auto_task.py &
