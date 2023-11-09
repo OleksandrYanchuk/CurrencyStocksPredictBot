@@ -14,7 +14,7 @@ def run_my_script():
     subprocess.run(["python", "predict_bot.py"])
 
 
-schedule.every().day.at("21:59").do(run_my_script)
+schedule.every().day.at("22:10").do(run_my_script)
 
 
 # Main loop to check the schedule
