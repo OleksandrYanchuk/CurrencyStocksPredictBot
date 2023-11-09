@@ -1,11 +1,7 @@
-#!/usr/bin/env python
-
 import schedule
 import time
 import subprocess
-from flask import Flask
 
-app = Flask(__name__)
 
 def run_my_script():
     subprocess.run(["python", "currency_stock_data/currency_stock_data.py"])
@@ -21,7 +17,6 @@ def run_my_script():
 schedule.every().day.at("21:30").do(run_my_script)
 
 # Main loop to check the schedule
-def run_scheduled_job():
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
