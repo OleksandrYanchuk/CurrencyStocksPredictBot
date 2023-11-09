@@ -1,1 +1,1 @@
-worker: python auto_task.py
+CurrencyStocksPredictBot: python auto_task.py
