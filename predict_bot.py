@@ -1,4 +1,6 @@
 import logging
+import os
+import json
 from datetime import datetime, timedelta
 
 from aiogram import Bot, Dispatcher, types
@@ -9,8 +11,11 @@ from aiogram.types import (
     InlineKeyboardButton,
 )
 from currency_stock_data.labels import currency, stock_tickers
-import json
 
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 # Функція для завантаження даних з JSON-файлу
 def load_currency_data():
@@ -61,7 +66,7 @@ def load_stock_data_analys():
     return data
 
 
-API_TOKEN = "6769232966:AAHqN2ikRizwwOe9YjWeUfK5Oakd70rda_w"
+API_TOKEN = os.getenv("API_TOKEN")
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
